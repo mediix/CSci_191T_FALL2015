@@ -37,7 +37,7 @@ func listImages(res http.ResponseWriter, req *http.Request) {
 	ctx := appengine.NewContext(req)
 	q := datastore.NewQuery("Image").Order("Subject")
 
-	html := "<h2>Database</h2>"
+	html := "<h2>AppEngine DataStore</h2>"
 
 	iterator := q.Run(ctx)
 	for {
@@ -62,11 +62,11 @@ func listImages(res http.ResponseWriter, req *http.Request) {
 		<!DOCTYPE html>
 		<html>
 			<body>
-		
-				<h1>Image/Subject Database for Computer Recognition Training</h1>
-				
-				<h2>Submit New</h2>
-				
+
+				<h1>AppEngine Image Uploader</h1>
+
+				<h2>New Image</h2>
+
 				<form method="POST">
 					<table>
 						<tr>
@@ -83,7 +83,7 @@ func listImages(res http.ResponseWriter, req *http.Request) {
 						</tr>
 					</table>
 				</form>
-				
+
 				<dl>
 					`+html+`
 				</dl>
