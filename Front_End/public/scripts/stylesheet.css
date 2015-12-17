@@ -1,0 +1,99 @@
+span {
+    color: white;
+}
+
+img {
+    width:64px;
+    height:64px;
+}
+
+td {
+    border: 2px LightGray solid;
+    margin: auto;
+}
+
+table {
+    margin: auto;
+}
+
+button {
+    height: 50px;
+    width: 120px;
+    border-color: dimgray;
+    background-color: gainsboro;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: darkgreen;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+
+.header {
+  background: Gainsboro;
+  font-family: garamond, sans-serif;
+}
+
+.footer {
+  background: DarkSeaGreen;
+  font-family: garamond, sans-serif;
+}
+
+.main {
+  text-align: center;
+  background: White;
+  font-family: garamond, sans-serif;
+}
+
+.aside-1 {
+  background: Azure;
+  font-family: garamond, sans-serif;
+  color: silver;
+}
+
+.aside-2 {
+  background: HoneyDew;
+  font-family: garamond, sans-serif;
+  color: silver;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; }
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+body {
+  /*padding: 2em;*/
+    left: 0;
+    margin: 0;
+ }
+
